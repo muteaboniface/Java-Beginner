@@ -1,0 +1,202 @@
+>> Simple Java Maths
++ Mathematical Operations
+    + Add - +
+    + Subtract - -
+    + divide
+    + Multiply *
+    + modulus %
+    + post and pre-increment
+    + post and pre-decrement
+    +
++ Operator associativity
+    + addition and subtraction - left associativity
+
++ operator and associativity
+    + +,- > Unary plus and minus > Right to left
+    + !,~ > logical not and bitwise not > r2l
+    + = > r2l
+    + +=,-= > r2l
+    *= , /= , %= 	Assignment by product, quotient, and remainder 	Right to left
+    <<= , >>= 	Assignment by bitwise left shift and right shift 	Right to left
+    &= , ^= , = 	Assignment by bitwise AND, XOR, and OR 	Right to left
+    ++ , -- 	Suffix/postfix increment and decrement 	Right to left
+
+    * , / , % 	Multiplication, division, and remainder 	Left to Right
+    +,-  Addition and subtraction 	Left to Right
+    << , >> 	Bitwise left shift and right shift 	Left to Right
+    < , <= 	For relational operators 	Left to Right
+    > , >= 	For relational operators 	Left to Right
+    == , != 	For relational 	Left to Right
+    & 	Bitwise AND 	Left to Right
+    ^ 	Bitwise XOR (exclusive or) 	Left to Right
+    && 	Logical AND 	Left to Right
+    || 	Logical OR 	Left to Right
+    | 	Bitwise OR (inclusive or) 	Left to Right
+
++ Java math class
+    + The Java Math class is from the java.lang package.
+    It is easy to use, and since it is a part of the java.lang package and everything
+    from the java.lang package is automatically imported and available, so it does not need to be explicitly
+    imported.
+
+    + exponentiation
+        + math.pow(2,3)
+        + Math.exp()
+        + Math.sqrt()
+        + Math.cbrt()
+
+    + Logarithm
+        Math.log() - gives the natural log
+        Math.log10() - common log
+
+    + Trigonometry
+        Math.sin > take angle in radians > Math.toRadians(45)
+        tan
+        cos
+    + Absolute value
+        Math.abs()
+    + Max, Min values
+
+
++ String > are immutable
+    Backspace 	\b
+    Tab 	\t
+    NULL character 	\0
+    Newline 	\n
+    Carriage Control 	\r
+    Double Quote 	\ "
+    Single Quote 	\ ’
+    Backslash 	\ \
+
+    + string operations
+        .trim
+        .equals
+        .split()
+        string.substring() > provide indeces
+        string.toUpperCase()
+        string.toLowercase()
+        string.length()
+
++ Comparison Operators
+    switch
+        only uses int and short values, and character constants or character literals
+
+
+    if else
++ Conditional expression
+    ( condition ) ? expressionIfTrue : expressionIfFalse;
+    Use the conditional expression only if you feel that it really enhances the readability.
+
++ Loops
+    while & do-while loops
+        while
+            while ( condition ) {
+                //body
+            }
+        do while - used when your loop should execute at least once
+            do {
+                //body
+            } while (condition);
+
+        for loop
+            for (expression for initialization ; expression for testing ; expression for updating) {
+              //body
+            }
+
+        Nested for loops
+
+        Infinite loops
+
+
+
++ methods
+    + method is a mechanism that allows us to implement functionality or
+    attribute behavior to objects.
+    + Syntax
+    ClassOne{
+
+      visibility ReturnType Methodname(parameter_one, parameter_two){
+
+        //method body
+
+        return returnVariable;
+      }
+    }
+    + Visibility
+        + public - called anywhere in the application
+
+    + Parameters
+        + primitive data type
+            + passed by value
+
+            class prim_type {
+                public static void main(String[] args) {
+
+                    String name = "John";
+                    changeName(name);
+                    System.out.print(name);
+                }
+
+                public static void changeName(String n) {
+
+                    System.out.println(n);
+
+                }
+            }
+
+
+        + reference data type
+            + link btw variable name and object instance is passed
+            + object instance - variation of an object within the method
+            + object reference - Points to the address where the object instance is kept in memory
+
+
+            class car {
+
+                public String colour;
+                // initialised an empty constructor
+                public car() {};
+                // constructor, sets value of colour
+                public car(String col) {
+                    this.colour = col;
+                }
+
+                public String getColour() {
+                    return this.colour;
+                }
+
+                public static void main(String[] args) {
+                    car newCar = new car("Pink");
+                    System.out.print("Car colour is: " + newCar.getColour() + "\n");
+                    setColourBlue(newCar);
+                    System.out.print("Car colour is: " + newCar.getColour() + "\n");
+                }
+
+                public static void setColourBlue(car c) {
+                    c.colour = "Blue";
+                }
+            }
+
+        + Return parameter
+        + Constructor
+            + special method that is automatically called when an object is created
+            + has same name as the class
+            + every class must have a constructor
+
+    + Static methods
+        + static method is one that can be called without any object instance.
+        + These methods do not belong to any particular object but rather to the whole class.
+        + This method can be invoked without creating an object instance.
+        + non-static data members cannot be used  directly in static methods.
+        + non-static methods cannot be called directly in static methods.
+
+        + Example
+            + System.out.println()
+                + makes use of one output stream for all printing of outputs.
+
+
+// Takeaways
+    + If you divide a string in java, or perform any mathematical calculation, it is
+    automatically converted to an int.
+
+    + when an object is parsed to amethod, the method has a capability of modifying the object
