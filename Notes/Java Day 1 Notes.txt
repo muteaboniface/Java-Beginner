@@ -140,7 +140,9 @@ and then move the cursor to the beginning of the next line.
 >> convert to string
 	> String.valueOf()
 
-
+>> Run from the commandline
+	> you can use java file.java
+	> use javac to get a class then java {class_name}
 > Java review with Francis
 	+ Operators
 		+ addition and concatenation
